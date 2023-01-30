@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <ul class="nav-items">
             <a class="nav" href="#"><li>Home</li></a>
             <a class="nav" href="#"><li>Contact</li></a>
             <a class="nav" href="#"><li>About us</li></a>
@@ -33,12 +33,30 @@
             </ul>
         </div>
         <div>
+            <div class="flex-content">
+                <div class="flex-con flex-item1"></div>
+                <div class="flex-con flex-item2"></div>
+                <div class="flex-con flex-item3"></div>
+            </div>
+            <span>
+                <p>This is a display css rehash</p>
+                <p>This is a display css rehash2</p>
+            </span>
             <p>Here i shall Include a couple of photos</p>
-            <a href="#"><img src="1.jpg" alt="girl-photo"></a>
+            <div class="grid-container">
+                <a class="grid-item"href="#"><img src="1.jpg" alt="girl-photo"></a>
+                <a class="grid-item" href="#"><img src="2.jpg" alt="girl-photo"></a>
+                <a class="grid-item" href="#"><img src="5.jpg" alt="girl-photo"></a>
+                <a class="grid-item" href="#"><img src="6.jpg" alt="girl-photo"></a>
+
+            </div>
+            
             <p><a href="#">Click here </a>to view more Pictures</p>
         </div>
         <form id="phot-collage-form" action="/4.jpg">
-            <label><input type="radio"/ name="girl posing" checked>Posing</label>
+            <label><input type="radio" name="girl posing" checked>Posing</label>
+            <label><input type="radio" name="girl posing" >natural</label>
+            <label><input type="radio" name="girl posing" >off-guard</label>
         </form>
 
     </main>
