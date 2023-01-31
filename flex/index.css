@@ -12,11 +12,14 @@ body{
 
 }
 header{
-    background-color: grey;
     padding-top:5px;
     height:70px;
     justify-content: center;
     align-items: center;
+}
+header a{
+    font-size:26px;
+    color:rgb(82, 57, 10);
 }
 main{
     height:700px;
@@ -24,6 +27,118 @@ main{
 .text-red{
     color:red;
 }
+.parent{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    background-color:rgb(78, 16, 16);
+
+}
+.child{
+    width:50%;
+    height:50%;
+    border-radius: 50%;
+    transition: transform;
+}
+.parent:hover .child{
+    background-color: blue;
+    animation: jazzintro 2s ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+}
+ @keyframes jazzintro{
+    0%{
+        transform: translateX(0%);
+    }
+    33%{
+        background-color: red;
+        transform: translateX(100%);
+    }
+    66%{
+        background-color: yellow;
+        transform: translateX(100%) translateY(100%);
+    }
+    100%{
+        background-color: green;
+        transform: translateX(0%) translateY(0%);
+    }
+ }
+ .navigation-list{
+    list-style: none;
+    margin:0;
+    padding-top:10px;
+    display: flex;
+    justify-content: space-between;
+}
+.navigation-item{
+    margin: 0 10px;
+}
+.navigation-item a{
+    text-decoration: none;
+    color:rgb(95, 95, 5);
+}
+.navigation-item a:hover{
+    color:white;
+}
+
+.middle{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 5px;
+}
+.btn{
+    position: relative;
+    display: block;
+    color:white;
+    font-size:25px;
+    font-family: "montserrat";
+    margin:30px 0;
+    text-decoration: none;
+    border: 1px solid #5ee741;
+    padding:14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+}
+.btn::before{
+    background: #dcd159;
+    content: "";
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition:all 0.6s ease;
+}
+.btn-1::before{
+    width:0;
+    height:100%;
+}
+.btn-1:hover::before{
+    width:100%;
+}
+.btn-2::before{
+    width:100;
+    height:0%;
+}
+.btn-2:hover::before{
+    height:100%;
+}
+.btn-3::before{
+    width:100;
+    height:0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.btn-3:hover::before{
+    height:280%;
+}
+
+
+ 
 .carousel-img{
     width:300px;
     height:400px;
@@ -37,7 +152,7 @@ main{
 .carousel {
     position: relative;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 26px;
+    margin-top: 35px;
 }
 
 .carousel-inner {
@@ -183,17 +298,3 @@ footer{
 }
 
 
-.navigation-list{
-    list-style: none;
-    margin:0;
-    padding-top:10px;
-    display: flex;
-    justify-content: space-between;
-}
-.navigation-item{
-    margin: 0 10px;
-}
-.navigation-item a{
-    text-decoration: none;
-    color:white;
-}
