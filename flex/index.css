@@ -75,12 +75,33 @@ main{
 }
 .navigation-item a{
     text-decoration: none;
-    color:rgb(95, 95, 5);
+    color:rgb(211, 16, 16);
+    font-size: 24px;
 }
 .navigation-item a:hover{
     color:white;
 }
+.navigation-list{
+    background-color: blueviolet;
+    opacity: .5;
+    margin-top: -10px;
+}
+.navigation-subitem{
+    margin:0;
+    list-style: none;
+    width:200px;
+    height:60px;
+    float:bottom;
+}
+.navigation-subitem a{
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 24px;
 
+}
+.navigation-subitem a:hover{
+    background-color: #dcd159;
+}
 .middle{
     position: absolute;
     top:50%;
@@ -140,19 +161,21 @@ main{
 
  
 .carousel-img{
-    width:300px;
-    height:400px;
+    width:100%;
+    height:100%;
     justify-content: center;
     align-items: center;
 }
-.carousel-img2{
-    width:300px;
-    height:400px;
-}
+
 .carousel {
-    position: relative;
+    position:relative;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
     margin-top: 35px;
+    margin-left: 35%;
+    width:360px;
+    height:360px;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-inner {
@@ -292,9 +315,71 @@ main{
     }
     
 }
-footer{
-    background-color: grey;
-    margin-bottom: -15px;
+.container{
+    position: relative;
+    width:360px;
+    height:640px;
+    margin-top:50px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    background: rgba(0, 0, 0,0);
+    transform: rotate(-30deg) skew(25deg) scale(.8);
 }
+.container img{
+    position: absolute;
+    width:100%;
+    transition: 0.5s;
+}
+.container:hover img :nth-child(4){
+    transform: translate(160px, -160px);
+    opacity:1;
+
+}
+.container:hover img :nth-child(3){
+    transform: translate(120px, -120px);
+    opacity:.8;
+
+}
+.container:hover img :nth-child(2){
+    transform: translate(80px, -80px);
+    opacity: .6;
+
+}
+.container:hover img :nth-child(1){
+    transform: translate(40px, -40px);
+    opacity: .4;
+
+}
+
+img{
+    width:300px;
+    height:300px;
+}
+.cont2{
+    width:40%;
+    height:30vh;
+    background: #333;
+    margin-top: 30px;
+}
+.splash{
+    perspective: 400px;
+    width:30%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    transform-style: preserve-3d;
+}
+.splash img{
+    transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+    box-shadow: -80px 60px 15px 15px rgba(0,0,0,.4);
+    transition: all .4s;
+    transform-style: preserve-3d;
+}
+.splash:hover img{
+    transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+    box-shadow: 0px, 0px, 0px, 0px rgba(0,0,0,0);
+}
+
 
 
